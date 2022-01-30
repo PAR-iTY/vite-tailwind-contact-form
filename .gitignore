@@ -1,0 +1,9 @@
+# vite defaults
+dist
+dist-ssr
+.DS_Store
+*.local
+node_modules
+/.vscode/
+# added
+notes.notes

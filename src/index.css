@@ -1,0 +1,63 @@
+/* https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/ */
+/* change autocomplete styles in chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* extend components layer */
+@layer components {
+  .radio {
+    @apply block rounded-full px-4 py-3 w-10 h-10 ring-white hover:ring-2 checked:ring-2 checked:bg-none;
+  }
+
+  .checkbox {
+    @apply text-pink-500
+    rounded-full
+    p-3
+    m-2
+    hover:ring-2;
+  }
+
+  .textbox {
+    @apply bg-transparent border-transparent w-full mt-2 py-1 pr-1 pl-0 leading-tight focus:outline-none focus:ring-0 text-white hover:placeholder-gray-300 border-0 border-b border-pink-500 hover:border-blue-600;
+  }
+}
+
+/* extend utilities layer */
+
+/* adding new utilities for form resets
+https://tailwindcss.com/docs/adding-new-utilities */
+@layer utilities {
+  .base {
+    @apply bg-gray-900
+    text-pink-500
+    font-mono
+    p-4;
+  }
+  .centered {
+    @apply flex
+    min-h-screen
+    items-center
+    justify-center;
+  }
+
+  .required {
+    @apply border-red-600 hover:border-red-600 focus:border-red-600
+     text-red-600 hover:text-red-600 focus:text-red-600;
+  }
+
+  .required-msg {
+    @apply absolute
+    text-red-500
+    left-0 -bottom-6;
+  }
+}

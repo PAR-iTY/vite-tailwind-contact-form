@@ -1,0 +1,21 @@
+{
+  "name": "vite-tailwind",
+  "version": "0.0.1",
+  "description": "Contact form static site using Vitejs and Tailwind CSS",
+  "license": "GPL-3.0",
+  "author": "PAR-iTY",
+  "homepage": "https://vite-tailwind-form.surge.sh",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.4",
+    "@vitejs/plugin-legacy": "^1.6.2",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.4"
+  }
+}
