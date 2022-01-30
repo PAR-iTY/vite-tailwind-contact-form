@@ -1,3 +1,7 @@
+Contact form experiment built with vitejs + tailwindcss configured for legacy support (IE11+) and accessibility (aria-labels). Uses an API for form-submission handling and delivery to email address, and is deployed with surge.sh
+
+vite-tailwind-form.surge.sh/
+
 `form submission handling`
 i chose this email API service https://formsapi.jabwn.com/
 it uses a API key so no exposure of email address in the html and appears to have a good privacy policy compared with its competitors for security
