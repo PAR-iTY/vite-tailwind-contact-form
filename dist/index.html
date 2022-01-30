@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" src="/assets/polyfills-modern.128e77d0.js"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <!-- ally.js required for logger.js -->
+    <!-- <script src="https://unpkg.com/ally.js@1.4.1/ally.min.js"></script> -->
+    <!-- <script type="module" src="./src/logger.js"></script> -->
+    <title>Contact Form</title>
+    <script type="module" crossorigin src="/assets/main.81158a11.js"></script>
+    <link rel="stylesheet" href="/assets/index.2e57c01e.css">
+    <script type="module">!function(){try{new Function("m","return import(m)")}catch(o){console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}}();</script>
+  </head>
+
+  <body class="base centered">
+    <main>
+      <form
+        id="contact-form"
+        class="max-w-md rounded-2xl bg-black p-4"
+        action="https://formsapi.jabwn.com/key/sueyy1ybXtN9E4yhiZG0"
+        method="post"
+      >
+        <h1 class="text-xl border-b border-pink-500 inline-block">
+          Contact Form
+        </h1>
+
+        <!-- last and first two inputs are for form submission service -->
+        <input type="hidden" name="_valid[email]" value="required|valid_email" />
+        <input
+          type="text"
+          name="_honey"
+          value=""
+          style="display: none"
+          aria-hidden="true"
+        />
+        <input
+          type="text"
+          name="_kitemt"
+          value=""
+          style="display: none"
+          aria-hidden="true"
+        />
+        <!-- <input
+          type="hidden"
+          name="_confirmation"
+          value="Form sent, thank you!"
+        /> -->
+        <input
+          type="hidden"
+          name="_after"
+          value="http://localhost:5000/sent.html"
+        />
+        <fieldset class="my-8">
+          <legend class="block mb-4 font-semibold">
+            Please choose a colour
+          </legend>
+          <div class="grid grid-cols-5 place-items-start text-center">
+            <label for="blue">
+              <input
+                id="blue"
+                type="radio"
+                class="radio form-radio text-blue-600 bg-blue-600"
+                name="colour"
+                value="blue"
+                aria-label="Blue"
+              />
+              Blue
+            </label>
+            <label for="green">
+              <input
+                id="green"
+                type="radio"
+                class="radio form-radio text-green-600 bg-green-600"
+                name="colour"
+                value="green"
+                aria-label="Green"
+              />
+              Green
+            </label>
+            <label for="red">
+              <input
+                id="red"
+                type="radio"
+                class="radio form-radio text-red-600 bg-red-600"
+                name="colour"
+                value="red"
+                aria-label="Red"
+              />
+              Red
+            </label>
+            <label for="black">
+              <input
+                id="black"
+                type="radio"
+                class="radio form-radio text-black bg-black"
+                name="colour"
+                value="black"
+                aria-label="Black"
+              />
+              Black
+            </label>
+            <label for="brown">
+              <input
+                id="brown"
+                type="radio"
+                class="radio form-radio text-yellow-900 bg-yellow-900"
+                name="colour"
+                value="brown"
+                aria-label="Brown"
+              />
+              Brown
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="my-8">
+          <legend class="block mb-4 font-semibold">
+            Please choose one or more animals
+          </legend>
+          <ul>
+            <li class="hover:text-white w-max">
+              <input
+                id="bear"
+                type="checkbox"
+                class="form-checkbox checkbox"
+                value="bear"
+                aria-label="Bear"
+                name="bear"
+              />
+              <label for="bear">Bear</label>
+            </li>
+            <li class="hover:text-white w-max">
+              <input
+                id="tiger"
+                type="checkbox"
+                class="form-checkbox checkbox"
+                value="tiger"
+                aria-label="Tiger"
+                name="tiger"
+              />
+              <label for="tiger">Tiger</label>
+              <div
+                hidden
+                class="relative inline-block hidden"
+                id="tiger-toggle"
+                aria-live="polite"
+              >
+                <label
+                  for="tiger-type"
+                  class="absolute -top-4 left-0 pr-1 pl-0 ml-2 sm:ml-4 text-pink-500"
+                  >Tiger type</label
+                >
+                <input
+                  id="tiger-type"
+                  name="tiger-type"
+                  type="text"
+                  autocomplete="on"
+                  class="w-32 sm:w-full pr-1 pl-0 ml-2 sm:ml-4 bg-transparent border-transparent leading-tight focus:outline-none focus:ring-0 text-white hover:placeholder-gray-300 border-0 border-b border-pink-500 hover:border-blue-600"
+                  placeholder="Siberian"
+                  aria-label="Tiger type"
+                />
+                <p class="required-msg hidden pr-1 pl-0 ml-2 sm:ml-4">
+                  Required
+                </p>
+              </div>
+            </li>
+            <li class="hover:text-white w-max">
+              <input
+                type="checkbox"
+                class="form-checkbox checkbox"
+                value="snake"
+                aria-label="Snake"
+                name="snake"
+                id="snake"
+              />
+              <label for="snake">Snake</label>
+            </li>
+            <li class="hover:text-white w-max">
+              <input
+                type="checkbox"
+                class="form-checkbox checkbox"
+                value="donkey"
+                aria-label="Donkey"
+                name="donkey"
+                id="donkey"
+              />
+              <label for="donkey">Donkey</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="my-8">
+          <legend class="block my-2 font-semibold">
+            Please leave a contact email and password
+          </legend>
+          <div class="flex items-stretch py-2">
+            <div class="mr-3 relative">
+              <label for="email">Email</label>
+              <input
+                required
+                name="email"
+                id="email"
+                type="email"
+                autocomplete="on"
+                class="form-input textbox"
+                placeholder="my@email.com"
+                aria-label="Email"
+              />
+              <p class="required-msg hidden">Required</p>
+            </div>
+            <div class="relative">
+              <label for="password">Password</label>
+              <input
+                required
+                name="password"
+                type="password"
+                id="password"
+                minlength="9"
+                class="form-input textbox"
+                placeholder="my-password"
+                aria-label="Password"
+              />
+              <p class="required-msg hidden">Required</p>
+            </div>
+          </div>
+        </fieldset>
+        <div class="flex items-center w-min py-2">
+          <button
+            id="submit"
+            class="flex-shrink-0 bg-pink-600 hover:bg-white hover:text-pink-600 border-pink-600 text-sm text-white py-1 px-2 mr-2 rounded disabled:opacity-50 disabled:pointer-events-none"
+            type="submit"
+            aria-label="Submit contact form"
+            disabled
+          >
+            Send
+          </button>
+          <button
+            id="cancel"
+            class="flex-shrink-0 border-transparent hover:text-white text-sm py-1 px-2 rounded"
+            type="button"
+            aria-label="Cancel contact form"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </main>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule id="vite-legacy-polyfill" src="/assets/polyfills-legacy.a848fe64.js"></script>
+    <script nomodule id="vite-legacy-entry" data-src="/assets/main-legacy.3063a5d3.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
