@@ -43,27 +43,3 @@ npx doiuse --browsers "ie >= 11" $(find ./dist/assets -type f -name "index.*.css
 
 # opinionated style errors
 npx html-validate ./dist/index.html
-
-# ------------------------------------------------------------------
-#
-# the broken libraries:
-#
-# ------------------------------------------------------------------
-
-# returns a lot of metadata stats
-# errors on accessability (uses phantom.js)
-npx staats https://vite-tailwind-form.surge.sh
-
-# BELOW: @axe-core/cli wrappers (all have errors)
-
-# downloads chromium
-# <error> seems to hang on closing chromium
-npx equa11y
-
-# downloads chromium
-# <error> seems to hang on closing chromium
-npx @a11ygato/cli audit https://vite-tailwind-form.surge.sh
-npx a11y-sitechecker https://vite-tailwind-form.surge.sh
-
-# <error> requires chromium
-npx conduct-a11y-audit -u https://vite-tailwind-form.surge.sh

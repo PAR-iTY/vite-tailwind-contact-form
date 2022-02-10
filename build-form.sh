@@ -13,9 +13,9 @@ code .
 npm i
 
 # install dev dependencies:
-#  - vitejs legacy browser support (IE11+) plugin
-#  - tailwind and postCSS dependencies
-#  - tailwind form plugin
+# - vitejs legacy browser support (IE11+) plugin
+# - tailwind and postCSS dependencies
+# - tailwind form plugin
 npm i -D tailwindcss@latest postcss@latest autoprefixer@latest @vitejs/plugin-legacy@latest @tailwindcss/forms@latest
 
 # generate tailwind and postcss config files
