@@ -54,6 +54,5 @@ took an HTML heavy approach for semantic and accessability improvements inluding
 
 ## todo
 
-- wrap checkbox and email/password in fieldsets
 - increase use and understanding of aria labels
-- make required fields look required more obviously required
+- make required fields look required more visually required
